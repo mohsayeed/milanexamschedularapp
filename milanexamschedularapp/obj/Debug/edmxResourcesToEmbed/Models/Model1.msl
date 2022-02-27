@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="milanModelStoreContainer" CdmEntityContainer="Entities1">
+    <EntitySetMapping Name="courseInfoes">
+      <EntityTypeMapping TypeName="milanModel.courseInfo">
+        <MappingFragment StoreEntitySet="courseInfo">
+          <ScalarProperty Name="courseID" ColumnName="courseID" />
+          <ScalarProperty Name="courseName" ColumnName="courseName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="listofdates" FunctionName="milanModel.Store.listofdates">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="milanModel.listofdates_Result">
+          <ScalarProperty Name="courseID" ColumnName="courseID" />
+          <ScalarProperty Name="dates" ColumnName="dates" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>
